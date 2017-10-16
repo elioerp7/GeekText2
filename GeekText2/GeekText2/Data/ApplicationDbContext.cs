@@ -55,6 +55,7 @@ namespace GeekText2.Data
             }
             return list;
         }
+        //not used yet
         public void PopulateDatabase()
         {
             using (MySqlConnection conn = GetConnection())

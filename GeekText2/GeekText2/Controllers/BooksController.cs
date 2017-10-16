@@ -9,7 +9,7 @@ namespace GeekText2.Controllers
 {
     public class BooksController : Controller
     {
-        public IActionResult Index()
+        public IActionResult ViewBooks()
         {
             ApplicationDbContext context = HttpContext.RequestServices.GetService(typeof(ApplicationDbContext)) as ApplicationDbContext;
 

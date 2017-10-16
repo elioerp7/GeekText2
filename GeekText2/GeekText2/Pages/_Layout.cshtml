@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -33,6 +33,14 @@
                     <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
+                    <li>
+                        <div>
+                            @using (Html.BeginForm("ViewBooks", "Books", FormMethod.Get))
+                            {
+                                @Html.TextBox("search", null, new { @class = "navbar navbar-default" }) <input type="submit" class="btn btn-default btn-lg" value="search" />
+                            }
+                        </div>
+                    </li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
